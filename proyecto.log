@@ -1,0 +1,586 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.10)  4 JUN 2020 19:28
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**proyecto.tex
+(./proyecto.tex
+LaTeX2e <2019-10-01> patch level 1
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/08/27 v1.4j Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\lst@mode=\count89
+\lst@gtempboxa=\box27
+\lst@token=\toks15
+\lst@length=\count90
+\lst@currlwidth=\dimen103
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen104
+\lst@width=\dimen105
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen106
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box28
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/10/15 3.35 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/10/15 3.35 Babel switching mechanism
+)
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/10/15 3.35 Babel common definitions
+\babel@savecnt=\count97
+\U@D=\dimen107
+
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count98
+)
+\es@quottoks=\toks18
+\es@quotdepth=\count99
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+))
+(/usr/share/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen108
+\ar@mcellbox=\box29
+\extrarowheight=\dimen109
+\NC@list=\toks19
+\extratabsurround=\skip43
+\backup@length=\skip44
+\ar@cellbox=\box30
+))
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks20
+\verbatim@line=\toks21
+\verbatim@in@stream=\read1
+)
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip45
+\f@nch@O@elh=\skip46
+\f@nch@O@erh=\skip47
+\f@nch@O@olh=\skip48
+\f@nch@O@orh=\skip49
+\f@nch@O@elf=\skip50
+\f@nch@O@erf=\skip51
+\f@nch@O@olf=\skip52
+\f@nch@O@orf=\skip53
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
+)
+(/usr/share/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks22
+\AP@partial=\box31
+\AP@footins=\box32
+)
+(/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count100
+\LTcapwidth=\dimen112
+\LT@head=\box33
+\LT@firsthead=\box34
+\LT@foot=\box35
+\LT@lastfoot=\box36
+\LT@cols=\count101
+\LT@rows=\count102
+\c@LT@tables=\count103
+\c@LT@chunks=\count104
+\LT@p@ftn=\toks23
+)
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \AP@enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen113
+\Hy@linkcounter=\count105
+\Hy@pagecounter=\count106
+
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count107
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+
+Package hyperref Warning: Invalid value `000'
+(hyperref)                for option `pdfborder'.
+(hyperref)                Option setting is ignored on input line 4414.
+
+Package hyperref Info: Hyper figures OFF on input line 4540.
+Package hyperref Info: Link nesting OFF on input line 4545.
+Package hyperref Info: Hyper index ON on input line 4548.
+Package hyperref Info: Plain pages OFF on input line 4555.
+Package hyperref Info: Backreferencing OFF on input line 4560.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4793.
+\c@Hy@tempcnt=\count108
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5152.
+\XeTeXLinkMargin=\dimen114
+\Fld@menulength=\count109
+\Field@Width=\dimen115
+\Fld@charsize=\dimen116
+Package hyperref Info: Hyper figures OFF on input line 6423.
+Package hyperref Info: Link nesting OFF on input line 6428.
+Package hyperref Info: Hyper index ON on input line 6431.
+Package hyperref Info: backreferencing OFF on input line 6438.
+Package hyperref Info: Link coloring OFF on input line 6443.
+Package hyperref Info: Link coloring with OCG OFF on input line 6448.
+Package hyperref Info: PDF/A mode OFF on input line 6453.
+LaTeX Info: Redefining \ref on input line 6493.
+LaTeX Info: Redefining \pageref on input line 6497.
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
+\Fld@listcount=\count113
+\c@bookmark@seq@number=\count114
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip58
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 57.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 57.
+
+(/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+\everycr=\toks24
+\minrowclearance=\skip59
+)
+(/usr/share/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks25
+\footnotemargin=\dimen117
+\c@pp@next@reset=\count115
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+\c@teorema=\count116
+\c@ejemplo=\count117
+\c@definicion=\count118
+
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2019/09/21 v0.5n Insert pages of external PDF documents (AM)
+
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count119
+\calc@Bcount=\count120
+\calc@Adimen=\dimen118
+\calc@Bdimen=\dimen119
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count121
+\calc@Cskip=\skip62
+)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+)
+\AM@pagewidth=\dimen120
+\AM@pageheight=\dimen121
+
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2019/09/21 v0.5n Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box37
+\AM@global@opts=\toks26
+\AM@toc@title=\toks27
+\c@AM@survey=\count122
+\AM@templatesizebox=\box38
+) (./proyecto.aux
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+)
+\openout1 = `proyecto.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+\c@lstlisting=\count123
+LaTeX Info: Redefining \. on input line 174.
+LaTeX Info: Redefining \% on input line 174.
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen122
+\scratchbox=\box39
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen123
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks29
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box40
+Package hyperref Info: Link coloring OFF on input line 174.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count130
+)
+LaTeX Info: Redefining \ref on input line 174.
+LaTeX Info: Redefining \pageref on input line 174.
+LaTeX Info: Redefining \nameref on input line 174.
+
+(./proyecto.out) (./proyecto.out)
+\@outlinefile=\write3
+\openout3 = `proyecto.out'.
+
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) (./portada/portada.tex
+\centeroffset=\skip63
+<imagenes/logo_ugr.jpg, id=8, 777.90625pt x 231.86626pt>
+File: imagenes/logo_ugr.jpg Graphic file (type jpg)
+<use imagenes/logo_ugr.jpg>
+Package pdftex.def Info: imagenes/logo_ugr.jpg  used on input line 12.
+(pdftex.def)             Requested size: 323.9978pt x 96.57295pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 23.
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 9--24
+| $[]$ 
+ []
+
+<imagenes/etsiit_logo.png, id=9, 110.814pt x 40.4712pt>
+File: imagenes/etsiit_logo.png Graphic file (type png)
+<use imagenes/etsiit_logo.png>
+Package pdftex.def Info: imagenes/etsiit_logo.png  used on input line 32.
+(pdftex.def)             Requested size: 108.0011pt x 39.44412pt.
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 26--39
+| $[]$ 
+ []
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imagenes/logo_ugr.jpg> <
+./imagenes/etsiit_logo.png>]) (./prefacios/prefacio.tex [2
+
+]
+(./portada/portada_2.tex [3] [4
+
+]
+<imagenes/logo.png, id=34, 123.46124pt x 45.92157pt>
+File: imagenes/logo.png Graphic file (type png)
+<use imagenes/logo.png>
+Package pdftex.def Info: imagenes/logo.png  used on input line 21.
+(pdftex.def)             Requested size: 123.46092pt x 45.92145pt.
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 8--31
+| $[]$ 
+ []
+
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 33--47
+| $[]$
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.49 \end{titlepage}
+                     [1 <./imagenes/logo.png>])pdfTeX warning (ext4): destinati
+on with the same identifier (name{page.2}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.11 \cleardoublepage
+                      [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 \cleardoublepage
+                      [3]pdfTeX warning (ext4): destination with the same ident
+ifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 \cleardoublepage
+                      [4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+[5] [6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+[7] [8
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+[9] [10
+
+]) (./capitulos/01_Introduccion.tex [11] [12
+
+]
+Cap\'{\i }tulo 1.
+) [13] [14
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
+ [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
+ (./proyecto.aux
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
+Package rerunfilecheck Info: File `proyecto.out' has not changed.
+(rerunfilecheck)             Checksum: 8AF23C1D813988E6E7F259072BDD4865;50.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 216.
+ ) 
+Here is how much of TeX's memory you used:
+ 8756 strings out of 492167
+ 126484 string characters out of 6131558
+ 237031 words of memory out of 5000000
+ 12979 multiletter control sequences out of 15000+600000
+ 9811 words of font info for 34 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 31i,6n,45p,208b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb>
+Output written on proyecto.pdf (19 pages, 184868 bytes).
+PDF statistics:
+ 124 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
+ 24 words of extra memory for PDF output out of 10000 (max. 10000000)
+
