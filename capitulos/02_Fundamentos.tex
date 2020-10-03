@@ -1,0 +1,37 @@
+\section{Security vs Compilance}
+
+Cuando hablamos en términos de ciberseguridad necesitamos destacar el término \Gls{compilance}, que podría traducirse como 'el cumplimiento' de las normativas o leyes referentes a la seguridad de los datos que una empresa pueda almacenar o gestionar. Cualquier compañía con acceso a datos sensibles de sus clientes está obligada a asegurar unos mínimos requisitos de seguridad en sus entornos y ser capaz de demostrar que los cumple. \cite{phoenixnap}
+
+\textit{Compilance} significa la capacidad que tiene una empresa de detallar su estado de seguridad de acuerdo a una serie de requisitos regulados en forma de legislación o regulaciones de la industria o simplemente en base a unos estándar creados a partir de buenas prácticas aceptadas por la comunidad.
+
+Algunos ejemplos importantes de \textit{'compilances'}
+
+\begin{description}
+\item[HIPAA](Health Insurance Portability and Accountability Act) Se aplica a compañías del ámbito sanitario y regulariza cómo dichas compañías deben manejar y asegurar la seguridad de los datos médicos personales de sus pacientes. 
+
+\item[PCI DSS] (Payment Card Industry Data Security Standard) Creado por algunas compañías de la industria de pago con tarjetas de crédito que quiso normalizar como se asegurar la integridad de la información financiera de sus clientes. Wazuh \cite{wazuh-pci} cuenta con herramientas para asegurar este \textit{compilance} asegurando (entre otros) la detección de \textit{rootkits} 
+
+\item[SOC Reports] Se trata de unos reportes de control de sistemas y organizaciones verificable, llevado a cabo por una \acrfull{CPA} para asegurar el cumplimiento de las normativas de seguridad cuando la compañía maneja datos sensibles de sus clientes.
+
+\end{description}
+
+\section{Fases de una auditoría de ciberseguridad}
+
+\subsection{Recopilación de información}
+
+La primera fase de toda auditoría de ciberseguridad o test de penetración sería la recopilación de toda la información posible sobre los objetivos. Necesitamos llegar a conocer puntos de acceso al sistema (IPs de los distintos servidores, servicios utilizados por estos y abiertos a peticiones externas, websites, etc...), así como posible vulnerabilidades relacionadas con los usuarios del mismo (correos electrónicos que podrían ser hackeables, contraseñas inseguras o nombres de usuario que aparezcan en bases de datos de la deep web, etc...)
+
+En un caso real, empezaríamos por investigar a la empresa a la que vamos a monitorizar y recopilar toda la información posible sobre sus sistemas y usuarios. Como el estudio se realizará sobre máquinas virtuales y no existe una empresa real a la que investigar, en nuestro caso la primera fase consistirá principalmente en recopilar información a partir de las IPs, conocidas (suponemos realizada la fase de descubrimiento de hosts) de las mismas. Es decir, empezaremos por un escaneo de puertos y descubriremos aquellos servicios reconocibles desde el exterior, también intentaremos obtener información de la versión del sistema operativo del host y de los distintos servicios que ofrece, e intentaremos sobrepasar los firewalls. 
+
+
+\section{Aspectos legales del pentesting}
+
+En primer lugar discutiremos los aspectos legales del trabajo de un hacker ético o pen-tester. Es importante tenerlos en cuenta para evitar problemas legales en un futuro y también una de las razones más importantes por las que se requiere un \textbf{entorno de pruebas seguro}.
+
+\subsection{Introducción y aspectos generales}
+\subsection{Leyes en Europa}
+\subsection{Leyes en España}
+
+
+
+\subsection{HoneyPots y ADS}

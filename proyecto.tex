@@ -33,12 +33,17 @@ sorting=ynt
 
 \usepackage{longtable}
 
-\usepackage[pdfborder={000}]{hyperref} %referencia
+\usepackage[hidelinks]{hyperref}
+\usepackage{glossaries}
+
+\makeglossaries
+
+\input{glosario}
 
 % ********************************************************************
 % Re-usable information
 % ********************************************************************
-\newcommand{\myTitle}{Título del proyecto\xspace}
+\newcommand{\myTitle}{Integración de los procesos de Hacking ético en la plataforma de ciberseguridad de Wazuh \xspace}
 \newcommand{\myDegree}{Grado en ingeniería informáticaxspace}
 \newcommand{\myName}{Francisco Navarro Morales\xspace}
 \newcommand{\myProf}{Alberto Guillén Perales\xspace}
@@ -150,7 +155,7 @@ Telecomunicación\xspace}
 \newcommand{\bigrule}{\titlerule[0.5mm]}
 
 
-%Para conseguir que en las páginas en blanco no ponga cabecerass
+%Para conseguir que en las páginas en blanco no ponga cabeceras
 \makeatletter
 \def\clearpage{%
   \ifvmode
@@ -179,21 +184,13 @@ Telecomunicación\xspace}
 %
 %\mainmatter
 %\setlength{\parskip}{5pt}
+\printglossaries
 \input{capitulos/01_Introduccion}
-%
-%\input{capitulos/02_EspecificacionRequisitos}
-%
-%\input{capitulos/03_Planificacion}
-%
-%\input{capitulos/04_Analisis}
-%
-%\input{capitulos/05_Diseno}
-%
-%\input{capitulos/06_Implementacion}
-%
-%\input{capitulos/07_Pruebas}
-%
-%\input{capitulos/08_Conclusiones}
+\input{capitulos/02_Fundamentos}
+\input{capitulos/03_Entorno}
+\input{capitulos/04_Herramientas}
+\input{capitulos/05_Test_Penetración}
+
 %
 %%\chapter{Conclusiones y Trabajos Futuros}
 %
@@ -209,7 +206,7 @@ Telecomunicación\xspace}
 
 \medskip
 
-%\printbibliography
+\printbibliography
 
 \chapter*{}
 \thispagestyle{empty}

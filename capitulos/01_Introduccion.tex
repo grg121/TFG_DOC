@@ -2,17 +2,19 @@
 
 \section{\textit{Hacking} ético y seguridad ofensiva}
 
-En un contexto marcado por el explosivo crecimiento de las tecnologías de la información, nuestras vidas se encuentran cada vez más ligadas a los dispositivos electrónicos y a sus posibles vulnerabilidades: el comercio electrónico y la banca \textit{online}, el uso correo electrónico como alternativa al tradicional, así como la creciente expansión del internet de las cosas (\textit{IOT}) en nuestras vidas o la enorme presencia de los dispositivos móviles en ella y el uso de la nube (\textit{Cloud Computing}), entre otros, crean un entorno en el que aquellos dispuestos a buscar y explotar las vulnerabilidades de nuestros sistemas pueden lucrarse y perjudicar gravemente a otros si no tomamos medidas.
+En un contexto marcado por el explosivo crecimiento de las tecnologías de la información, nuestras vidas se encuentran cada vez más ligadas a los dispositivos electrónicos y a sus posibles vulnerabilidades: la aparición del comercio electrónico y la banca \textit{online}, el uso del correo electrónico como alternativa al tradicional o la creciente expansión del internet de las cosas (\acrshort{iot}), \gls{cloud} o el creciente uso de los dispositivos móviles, entre otros, crean un entorno en el que aquellos dispuestos a buscar y explotar las vulnerabilidades de nuestros sistemas pueden lucrarse y perjudicar gravemente si no se toman medidas para evitarlo.
 
-    En este marco surgen constantemente más y más herramientas para asegurar la protección de nuestros dispositivos, tanto de los datos sensibles como de la disponibilidad de los mismos (ya sea porque un ataque inhabilite un servicio que ofrecemos o cierto tipo de \textit{Malware} nos impida acceder a nuestro dispositivo de forma regular). Entre todas estas herramientas surge \textbf{\textit{Wazuh}}, una plataforma \textit{OpenSource} de ciberseguridad que pretende convertirse en un estándar y una referencia a la hora de proteger nuestros sistemas y que engloba distintos tipos de módulos o herramientas que nos ofrecen, entre otras cosas, recolección y análisis de los registros (\textit{logs}) de nuestros \textit{endpoints}, detección de vulnerabilidades en el software instalado, control de la integridad de archivos sensibles o detección de intrusiones. 
+En este marco surgen constantemente herramientas para asegurar la protección de nuestros dispositivos, tanto de los datos sensibles como de la disponibilidad de los mismos (ya sea porque un ataque inhabilite un servicio que ofrecemos o cierto tipo de \Gls{Malware} nos impida acceder a nuestro dispositivo de forma regular, véase \gls{Ransomware}). Entre todas estas herramientas surge \textbf{\textit{Wazuh}}, una plataforma \gls{OpenSource} de ciberseguridad que pretende convertirse en un estándar y una referencia a la hora de proteger nuestros sistemas y que engloba distintos tipos de módulos o herramientas que nos ofrecen, entre otras cosas, recolección y análisis de los registros (\textit{logs}) de nuestros \textit{endpoints}, detección de vulnerabilidades en el software instalado, control de la integridad de archivos sensibles o detección de intrusiones. 
 
-Sin embargo, actualmente Wazuh se utiliza solo desde la perspectiva del administrador de sistemas que quiere asegurar la seguridad de su entorno desde dentro y no desde una perspectiva externa, la de un posible atacante intentando hallar un punto de acceso a su sistema. ¿Por qué podría interesarnos esto? Es aquí dónde entra en juego el Hacking ético y la seguridad ofensiva.
+Wazuh se utiliza para asegurar la seguridad de nuestros entornos analizando los eventos de interés que ocurren en el sistema y generando alertas cuando sea necesario. Puesto que se trata de un software que pretende alertar de posibles ataques e intrusiones, sería muy interesante buscar un enfoque que se adecue a las necesidades de aquellos que se dedican a poner a prueba los sistemas. Wazuh podría ser una herramienta esencial para llevar a cabo análisis de penetración de sistemas desde una perspectiva externa, desde la llamada "seguridad ofensiva". 
+
+El objetivo principal de este proyecto es investigar y analizar las principales herramientas disponibles para aquellos que trabajan en auditorías de ciberseguridad y determinar cómo puede encajar Wazuh dentro del marco de las mismas con la idea de \textbf{crear un entorno de desarrollo para test de penetración de sistemas} capaz de extraer, analizar e indexar la información proporcionada por las herramientas disponibles en el mismo, de forma que se facilite el almacenamiento e intercambio de la información relevante de \textbf{todo aquello que se ha probado durante la auditoría}, bien para intercambio de información entre los miembros del equipo que esté llevando a cabo la misma o bien como una fuente importante de información que entregar a un cliente cuando se realiza una auditoría, así como una base para posibles informes y reportes del mismo.
 
 \subsection{Seguridad ofensiva}
 
-Dicen que a veces la mejor defensa es un buen ataque. Pese a que las medidas que un administrador pueda tomar `desde dentro del sistema' pueden ser más que suficientes para proteger un dispositivo, cada vez están más presentes en el ámbito de la ciberseguridad aquellos que se ponen en la piel de un atacante e intentan encontrar puntos flacos en las defensas de un sistema \textbf{desde fuera}. Son los llamados \textbf{\textit{hacker éticos}}. Actuando dentro del marco legal y con permiso explícito de los dueños de un sistema, tratan de atacarlo como si fueran alguien intentando sacar algún provecho de estos o causar daños.
+A veces la mejor defensa puede ser un buen ataque. Pese a que las medidas que un administrador pueda tomar `desde dentro del sistema' pueden ser más que suficientes para proteger un dispositivo, cada vez están más presentes en el ámbito de la ciberseguridad aquellos que se ponen en la piel de un atacante e intentan encontrar puntos flacos en las defensas de un sistema `\textbf{desde fuera}'. Son los llamados \textbf{\textit{hacker éticos}}. Actuando dentro del marco legal y con permiso explícito de los responsables de un sistema, tratan de atacarlo como si quisieran sacar algún provecho de estos o causar daños, utilizando, en muchas ocasiones, técnicas de ingeniería social para encontrar puntos de acceso al sistema a partir de malas prácticas de usuarios con acceso a los mismos.
 
-El mensaje ha calado con fuerza en la comunidad y diversos grupos de \textit{hackers} han desarrollado herramientas para lo que llaman "\textit{tests} de penetración de sistemas", en los que buscan extraer toda la información posible de un sistema por medio de técnicas como el escaneo de puertos, descifrado de contraseñas, análisis de redes (\textit{network sniffing}) o ingeniería inversa. 
+El mensaje ha calado con fuerza en la comunidad y diversos grupos de \textit{hackers} han desarrollado herramientas para lo que llaman "\textit{tests} de penetración de sistemas", en los que buscan extraer toda la información posible de un sistema por medio de técnicas como el escaneo de puertos, descifrado de contraseñas, análisis de redes (\gls{network sniffing}) o \gls{Reverse engineering}. 
 
 Muchas de estas técnicas se pueden llevar a cabo por medio de herramientas OpenSource que suelen estar disponibles de un modo u otro en las distintas distribuciones de Linux. Es por ello que surgen diversas distribuciones especializadas en test de penetración como \textbf{Kali Linux} (basada en Debian) o \textit{Black Arch Linux}, un derivado de \textit{Arch Linux} con repositorios y herramientas pensadas para este tipo de tests.
 
@@ -23,7 +25,29 @@ Muchas de estas técnicas se pueden llevar a cabo por medio de herramientas Open
 
 \section{Motivación}
 
-\textit{Kali Linux} (así como otras distribuciones Linux orientadas a seguridad ofensiva) y la mayoría de sus herramientas son libres y gratuitas. Así como también lo es Wazuh. Dado que Wazuh pretende ofrecer a sus usuarios una \textbf{plataforma de ciberseguridad única} que reúna todo aquello que puedan necesitar para la seguridad de sus sistemas en único software (evitando así tener multitud de herramientas para cada necesidad distinta), sería interesante para ambas comunidades, la de Wazuh y la de hackers éticos que hacen uso de estas distribuciones, que se acortaran las distancias entre estas dos herramientas y se facilitara el uso conjunto de ambas. De esta forma, las dos herramientas podrían beneficiarse una de la otra y crear una comunidad conjunta sólida y robusta y el proyecto Wazuh (con sede en Granada) podría introducirse en la la escena de la ciberseguridad ofensiva basada en test de penetración.
+\textit{Kali Linux} (así como otras distribuciones Linux orientadas a seguridad ofensiva) y la mayoría de sus herramientas son libres y gratuitas, al igual que la plataforma Wazuh. Dado que esta pretende ofrecer a sus usuarios una \textbf{única plataforma de ciberseguridad } que reúna todo aquello que puedan necesitar para la seguridad de sus sistemas en único software (evitando así tener multitud de herramientas para cada necesidad distinta), sería interesante para ambas comunidades, la de Wazuh y la de hackers éticos que hacen uso de estas distribuciones, que se acortaran las distancias entre estas dos herramientas y se facilitara el uso conjunto de ambas. De esta forma, las dos herramientas podrían beneficiarse una de la otra y crear una comunidad conjunta sólida y robusta y el proyecto Wazuh (con sede en Granada) podría introducirse en la la escena de la ciberseguridad ofensiva basada en test de penetración.
+
+\subsection{Registro de nuestros movimientos}
+Una de las principales características de Wazuh es que está diseñado para, fácilmente, indexar en un motor de búsqueda como Elasticsearch eventos de seguridad de interés. Así pues, cabe destacar que un aspecto fundamental de las auditorías de seguridad (penetration testing) es el registro (o logging) de nuestros pasos durante el test por varias razones entre las cuales quiero destacar:
+
+nota, source: https://www.contextis.com/us/blog/logging-like-a-lumberjack
+
+\begin{description}
+\item[Reporting] Unos buenos logs nos pueden servir como referencia a la hora de escribir o mejorar un reporte.
+\item[Responsabilidad] Si ocurre algún problema durante el test de penetración. Tener un buen registro de todo lo que se ha hecho durante la auditoría puede servir para probar que no hemos sido nosotros los causantes de algún daño que se haya producido durante la auditoría.
+\item[Contrato] Es posible que los clientes especifiquen en el propio contrato del trabajo que es necesario registrar todos los pasos tomados.
+\item[Replicidad] Llevando un registro de nuestros tests podremos replicarlos o imitarlos en un futuro si fuera necesario. 
+\end{description}
+
+\subsection{Faraday: un entorno colaborativo de penetración de sistemas y administración de vulnerabilidades}
+
+Existe un proyecto opensource llamado \textbf{Faraday}\footnote{Ver \url{https://github.com/infobyte/faraday}} que pretende ofrecer una experiencia multiusuario de entorno de desarrollo para test de penetración de sistemas. Esta diseñado para analizar datos extraídos de distintas herramientas de ciberseguridad e indexar los resultados del análisis de forma que tengan un formato analizable y fácil de compartir. 
+
+Usando Wazuh junto con Elasticsearch, Kibana y la Wazuh-app, podemos aspirar a ofrecer un servicio similar al de Faraday con muchas ventajas. DESARROLLAR
+
+\subsubsection{Análisis de Faraday}
+
+TODO
 
 \section{Justificación}
 
@@ -44,33 +68,102 @@ Por un lado, sería interesante poder realizar test de penetración sobre sistem
 
 Por otro lado, Wazuh podría servir a alguien sin acceso a un sistema a realizar un test de penetración sobre este analizando los logs de las distintas herramientas utilizadas durante el test y generando alertas según la relevancia de los eventos que se detectaran. Esto serviría para tener un registro de todo lo que se ha probado y los resultados obtenidos que podría servir como base para desarrollar un informe para una compañía para la que estuviéramos trabajando o simplemente para dejar constancia de los resultados obtenidos.
 
+Además, uno de los puntos más sensibles de un test de penetración es la responsabilidad del auditor para con la empresa que le contrata. Si sucede algo o se produce algún daño durante la auditoría, el hacker ético puede verse en problemas. Utilizando Wazuh como un sistema de control de las acciones llevadas a cabo durante la auditoría serviría tanto para compartir los resultados obtenidos como para dejar constancia en tiempo real de las pruebas que se hacen en el sistema, como una forma de demostrar qué se ha hecho y qué no se ha hecho durante la auditoría.
+
 Así mismo, se podría aprovechar el potencial que ofrece el formato definido de alertas de Wazuh con Elasticsearch y Kibana para generar gráficas y \textit{dashboards} relacionados con los resultados del análisis. La propia base de datos de Elasticsearch, junto con su interfaz Kibana, podrían servir a modo de informe sobre un test realizado sobre varios sistemas.
 
-Así pues, Wazuh es una herramienta potencialmente valiosa para estas distribuciones de Linux descritas. Potencial porque Wazuh utiliza un \textit{ruleset} con decodificadores de logs y reglas para generar alertas que, actualmente, no da soporte para la mayoría de herramientas de que disponen estos sistemas. Como hemos señalado, Wazuh está más orientado a buscar eventos sensibles en los logs de los servicios que correrían en un endpoint o en \textit{logs} de \textit{firewalls}, antivirus, etc... y no en la información que podría dar una herramienta de test de penetración.
+Así pues, Wazuh es una herramienta potencialmente valiosa para aquellas distribuciones de Linux orientadas al test de penetración. Potencial porque Wazuh utiliza un \textit{ruleset} con decodificadores de logs y reglas para generar alertas que, actualmente, no da soporte para la mayoría de herramientas de que disponen estos sistemas. Como hemos señalado, Wazuh está más orientado a buscar eventos sensibles en los logs de los servicios que correrían en un endpoint o en \textit{firewalls}, antivirus, etc... y no en la información que podría dar una herramienta de test de penetración.
 
 Si realizamos una investigación de aquello que le falta a Wazuh para ser útil en este tipo de análisis, un posible desarrollo de decodificadores y reglas para esas herramientas podría suponer un paso enorme en el desarrollo del proyecto. Llevándolo a los administradores del mismo, es posible que estén dispuestos a integrarlo en su software e incluso, eventualmente, dar soporte oficial para aquellas funcionalidades que se desarrollaran a lo largo de este trabajo de fin de grado.
+
+\subsection{Hacking ético y el modelo de software libre empresarial}
+
+Wazuh es una compañía cuyo producto es completamente libre y gratuito. Eso significa que debe encontrar otros medios para sustentarse diferentes al venta de licencias.
+
+El modelo actual de Wazuh, y que la compañía defiende mantener, consiste en tener una comunidad Open Source de calidad y muy activa, ofreciendo soporte técnico especializado y gratuito a todos aquellos usuarios que lo soliciten y ofreciendo siempre las últimas actualizaciones a sus usuarios de forma gratuita. Para obtener beneficios, aprovechan la fama que proporciona dicha comunidad para vender `paquetes' de soporte técnico \textit{premium}, así como cursos de formación.
+
+Además de esto, el proyecto ha desarrollado una plataforma \gls{cloud} que permite al usuario que la contrata abstraerse de todos los problemas derivados de la instalación y mantenimiento de los servidores para utilizar Wazuh y ofrece a la compañía otra forma más de ingresos sin renunciar a un modelo en que su software es completamente libre y gratuito.
+
+Sin embargo, estas opciones no siempre son suficientes y conviene buscar otras alternativas. Si este proyecto tiene el potencial que se espera podría presentarse a los directivos de la empresa como una iniciativa para implantar en Wazuh un equipo de \textit{pen-testing} especializado cuyos servicios puedan ser contratados por empresas que conozcan el proyecto para buscarles vulnerabilidades.
+
+Podría ser una oportunidad de negocio de gran interés para la empresa y una forma de aportar valor a la misma por mi parte y de hacer que este trabajo no quede solo en un ámbito académico sino que escale al ámbito profesional.
 
 
 \section{Objetivos}
 
-Así pues, este proyecto sería esencialmente un proyecto de investigación: recopilar y analizar información sobre las distintas herramientas que se utilizan en análisis de penetración de sistemas, comparar las distintas distribuciones especializadas que podrían integrar Wazuh en ellas y realizar pruebas con ellas para extraer conclusiones. A partir de dichas conclusiones, se desarrollarían las mencionadas reglas y decodificadores para integrar estas herramientas en Wazuh y hacer posible su análisis con este, y se crearía un entorno para hacer pruebas. A partir de dicho entorno se podrían ir re-adaptando y mejorando las reglas y decodificadores, extraer conclusiones y desarrollar, si fuera de utilidad, dashboards o gráficos en Kibana para las reglas generadas.
+Así pues, este proyecto sería en parte un proyecto que conste de los siguientes pasos:
 
-Sin embargo, teniendo en cuenta el número de horas asociado al proyecto y con la idea de "crear" software que pueda respaldar la labor de investigación más allá de la creación de reglas y decodificadores y los posibles gráficos y dashboard, sería interesante abordar el proyecto desde una perspectiva de "infraestructura como código" (\textit{IaC}), es decir, llevar a la práctica la implementación de automatizaciones para el despliegue y aprovisionamiento de todo lo que necesite el proyecto. Por ejemplo, si se plantea exportar una máquina virtual con todo preparado para el funcionamiento de Wazuh en Kali Linux, no nos limitaremos a hacer una OVA y compartirla junto con esta memoria, sino que automatizaremos el procedimiento de generación de dicha OVA, de forma que se pueda actualizar y compartir esta fácilmente cuando haya una actualización de Kali Linux o de Wazuh.
+\begin{itemize}
+    \item Investigación sobre entornos de pruebas para pentest. Estado del arte, ejemplos de entornos viables para experimentar y análisis de ventajas e inconvenientes de los mismos. Instalación de Wazuh sobre estos entornos de pruebas para un análisis de los resultados obtenidos (desde la perspectiva del administrador de sistemas) en cuanto a alertas se refiere durante una auditoría o test de penetración.
 
-Del mismo modo, los entornos de pruebas que se utilizaran para testear las herramientas de análisis de penetración de sistemas serán desplegados y aprovisionados de forma automática y el procedimiento para ello quedará registrado y documentado y tendrá una licencia libre para que pueda usarse para otros propósitos.
-
-Por último, una parte importante del trabajo será intentar hacer llegar el mismo a la comunidad OpenSource y de hacking ético. Se pretenderá presentar el proyecto a la empresa que desarrolla Wazuh por si estuvieran interesados en integrar todos los cambios que se hicieran en su software y dar soporte para las nuevas funcionalidades propuestas y se publicaría todo el material desarrollado durante el trabajo en alguna web pública y en GitHub para intentar que el proyecto alcanzara a gente dispuesta a probarlo y utilizarlo en la práctica.
-
-En resumen, los objetivos de este trabajo serían:
-
-\begin{description}
-    \item [Investigación sobre herramientas de hacking] cuales son las más utilizadas y por qué, que información se puede conseguir con ellas, qué tipo de alertas podría generar el output de estas herramientas y que distribuciones de Linux las poseen. Clasificación de tales herramientas según su utilidad y la selección de varias de ellas por cada clase definida, que serán aquellas que integraremos con Wazuh. Realización de pruebas con las mismas en el entorno desarrollado \textbf{[30 horas]}
-    \item [Investigación sobre distribuciones de ciberseguridad] cuales son las más utilizadas y por qué. Comparativa y selección de una o varias de ellas para integrarla con Wazuh. \textbf{[5 horas]}
-    \item [Creación de imagen de testing:] que integre Wazuh y aquellas herramientas seleccionadas que no estén disponibles (si las hay) en la distribución. Dicha plataforma será una máquina virtual generada de forma automática y exportada como OVA y otros formatos disponibles. \textbf{[15 horas]}
-    \item [Diseño de un entorno de pruebas] para test de penetración, y desarrollo del mismo usando tecnologías como Vagrant o Terraform, Docker, etc... crearemos una infraestructura fácilmente desplegable en local o en la nube  que integre sistemas con varios sistemas operativos y varios software típicos de servidores empresariales (bases de datos, servidores web, WordPress, Nginx, etc..) conectados entre sí y con distintos tipos de interfaz de red e IPs (públicas, privadas...), distintas distribuciones de puertos y software instalado. \textbf{[60 horas]}
-    \item [Investigación y conclusiones] una vez desarrollado el entorno de pruebas y la imagen de Linux con Wazuh y cualquier dependencia, habría una extensa labor de probar en dicho entorno las herramientas seleccionadas en el primer punto, extraer conclusiones respecto a su uso y utilidad en un entorno que imita la realidad y la creación de sus reglas, decodificadores, dashboards, etc. Este es un punto aparte pero a medida que se vayan creando dichos elementos, deberán ir probándose y  esta tarea se retroalimentará con la siguiente buscando mejorar la integración con Wazuh y realizar un pequeño informe del aprendizaje extraído de este estudio. \textbf{[70+ horas]}
-    \item [Reglas y decoders] desarrollar aquellas reglas y decodificadores necesarios para las herramientas seleccionadas, que se integren en Wazuh y generen alertas deseables, con toda la información posible y de interés para posibles usuarios y para el proyecto de Wazuh. \textbf{[50 horas]}
-    \item [Desarrollo de un dashboard] para test de penetración en la app de Wazuh en Kibana, que incluya gráficas y tablas con información relevante según sea necesario. Idealmente, la app podría generar automáticamente un reporte del test realizado que sirviera como base para un informe de vulnerabilidades. \textbf{[50 horas]}
-    \item [Protocolo de actuación] una vez se tenga algo de experiencia con las distintas herramientas y se hayan hecho pruebas en sistemas de variada índole, se podría llegar a definir e, incluso, automatizar un protocolo base para llevar a cabo un test de penetración. Obviamente, dichos test requerirán cierta supervisión humana y muchas veces irán guiados por la situación y lo que dicten la lógica y los conocimientos de la persona realizando el test; sin embargo, tener un esquema definido puede ser útil tanto desde un punto de vista académico como práctico. \textbf{[20 horas]}
+    \item Investigación sobre las distintas distribuciones orientadas a test de penetración y sus herramientas. Clasificación de las herramientas según su utilidad y selección de aquellas que resulten de mayor interés. Realización de pruebas de las mismas sobre los distintos entornos de pruebas analizados en el primer punto.
     
-\end{description}
+    \item Desarrollo de reglas y decoders para integrar las herramientas de test de penetración en Wazuh. Así mismo, aprovecharemos los experimentos para encontrar casos que no estén actualmente contemplados por Wazuh y tratar de cubrirlos con las reglas que sea necesario. Todo el trabajo desarrollado se presentará a la compañía con el objetivo de integrarlo en el código oficial. 
+
+    \item Creación de una o varias imágenes de las distribuciones de Linux seleccionadas que integre Wazuh y aquellas herramientas de interés que no vengan por defecto y tratar de hacerlas llegar a la comunidad. La generación de dichas imágenes deberá automatizarse de forma que se puedan generar nuevas versiones de la misma conforme el software de Wazuh evolucione.
+    
+    \item Realización de un estudio de test de penetración sobre los entornos de pruebas definidos y creación de un protocolo de actuación para este tipo de estudios. Así mismo, se generarán informes con los resultados del test utilizando todas las herramientas creadas hasta el momento.
+    
+    \item Análisis de los aspectos legales ligados al desarrollo del trabajo y de toda aquella práctica posiblemente derivada del mismo. Entender qué peligros hay en llevar a cabo test de penetración de sistemas sin el consentimiento previo de la compañía o individuo cuyo sistema se va a poner a prueba y ofrecer formas seguras de formarse en esta temática sin riesgo de cometer un delito.
+
+\end{itemize}
+
+\section{Planificación}
+
+El desarrollo del trabajo constará de las siguientes fases.
+
+\subsection{Definición y creación del entorno de pruebas: 50 horas}
+
+Queremos hacer un entorno de pruebas realista. Investigaremos sobre aquellos tipos de \gls{compilance} más importantes (relacionados con finanzas o con datos médicos de los pacientes de un hospital, por ejemplo) y definiremos uno o varios escenarios que constarán de varias máquinas con distintos sistemas operativos (Linux, Unix, Windows, macOS, Solaris...) y distinto software según el escenario. 
+
+Utilizaremos un enfoque de infraestructura as a code, de forma que el entorno sea fácilmente desplegable y configurable tanto para el proyecto como para posibles interesados en hacer uso de él. 
+
+Las máquinas desplegadas tendrán todas instalados agentes de Wazuh, de forma que podamos comprobar en todo momento cómo responde el software a un ataque externo y si es capaz de generar todas las alertas que cabría esperar e incluso responder por medio de su sistema de `respuesta activa'.
+
+Estimo que el tiempo requerido será de unas cincuenta horas, teniendo en cuenta una parte de labor de investigacion y definición de los entornos y otra parte programando el despliegue y aprovisionamiento de las máquinas. Crearé un repositorio en GitHub con el código que utilice y un servidor Jenkins para automatizar el despligue de las instancias que hagan falta, así como su aprovisionamiento y destrucción.
+
+\subsection{Investigación sobre herramientas y distribuciones de pentesting: 30 horas}
+Una vez creado el entorno, descargaré algunas de las distribuciones más famosas en cuanto a test de penetración se refiere y probaré sus herramientas sobre el entorno de pruebas. La idea aquí sería realizar una comparativa de las distintas distribuciones y sus herramientas y hacer una clasificación y selección de aquellos programas que nos puedan servir como base para el proyecto. 
+
+Estimo que las pruebas y redacción de las comparativas y conclusiones puede requerir unas 30 horas. 
+
+\subsection{Desarrollo de reglas y decoders: 30 horas}
+
+Una vez seleccionadas las herramientas y distribuciones a utilizar, instalaremos Wazuh en ellas y empezaremos a hacer pruebas sobre el laboratorio de test. La idea es ir desarrollando decoders y reglas para que Wazuh pueda analizar el output de los distintos comandos y generar alertas cuando detecte que alguna información relevante ha sido descubierta durante el test, dejando un registro claro de ello en Elasticsearch y Kibana en forma de alerta.
+
+Así mismo, comprobaremos desde una perspectiva `interna' si los agentes de Wazuh instalados en las máquinas del entorno de pruebas son capaces de reportar todos los ataques que realicemos y en caso de detectar cualquier tipo de fisura en el software la reportaremos y trataremos de añadir las reglas o decoders que hagan falta, abriendo si es necesario un \gls{Pull Request} en el repositorio oficial del \textit{ruleset} de Wazuh.
+
+Esta parte no tendría un tiempo fijo definido, cuanto más tiempo se le dedique, más reglas y decoders podríamos añadir. En principio voy a asignarle 30 horas y, si sobrara tiempo, podría seguir trabajando en esta parte para dar soporte a más herramientas y casos de uso.
+
+\subsection{Dashboards e informes en Kibana: 50 horas}
+
+Wazuh dispone de un plugin para Kibana que podríamos utilizar como base para añadir una nueva pestaña dedicada al test de penetración, con un Dashboard que contenga algunas tablas y gráficos de interés, extraídos de las alertas generadas durante el test de penetración.
+
+No tengo muchos conocimientos sobre Kibana y cómo se programan estos elementos, por lo que pienso que esto me puede acabar llevando más tiempo de lo que debería. Así pues, considero que 50 horas puede ser una buena estimación. 
+
+\subsection{Creación de una o varias imágenes de Linux con Wazuh preparado para test de penetración: 20 horas}
+
+Esta parte sería automatizar la generación y exportación de dichas imágenes (de forma que se puedan generar nuevas imágenes cuando se libere una nueva versión de Wazuh o se actualice la imagen base de la distribución). 
+
+En principio se seleccionaría una de las distribuciones y si fuera bien de tiempo quizá se podría hacer lo mismo con una o dos más, dependiendo del tiempo que se tarde en hacer una de ellas.
+
+También sería interesante en este punto compartir con la comunidad dichas imágenes, publicar algún artículo en Medium, Dev, o alguna plataforma de blog técnicos que puedan llegar a aquellos a los que pueda resultarle interesante.
+
+Estimo que esta parte puede llevarse unas 20 horas
+
+\subsection{Fase final: estudio del test de penetración, 60 Horas}
+
+En esta fase y, basándonos en las conclusiones extraídas hasta el momento, definiríamos un protocolo de actuación para realizar un test de penetración (herramientas a utilizar y en qué orden, según qué obtengamos de cada una qué opciones llevar a cabo, etc..)
+
+Después, desplegaríamos uno o varios entornos `limpios' y realizaríamos sobre ellos un test de penetración simulando que fuera uno real y extrayendo del mismo conclusiones con las que generar un reporte (haciendo uso de las alertas generadas y de los dashboard de Kibana) que pudiera presentarse a la empresa detrás del entorno si este fuera un test real.
+
+En esta parte se deben emplear muchas horas puesto que durante el estudio puede surgir la necesidad de añadir más herramientas a nuestra imagen o más reglas y decoders a Wazuh, pueden descubrirse defectos en las reglas oficiales que podrían arreglarse, etc..
+
+\bigskip
+
+\subsection*{Desarrollo}
+
+En total, se ha estimado un reparto de 240 horas. El resto, 60 horas, serían destinados al desarrollo de este informe, planificación, reuniones y correcciones, así como a posibles contingencias que puedan hacer que alguno de los puntos anteriores se alargue más de lo esperado.  
+
+Como el plan es llevar a cabo el proyecto entre los meses de Julio de 2020 y Junio de 2021, y dado que actualmente me encuentro trabajando a jornada completa, he decidido repartir las 300 horas entre 11 meses, disponiendo así de unas 27 horas al mes, que serían más o menos 7 horas a la semana, pudiendo dedicar una hora diaria o mover si es necesario algunas horas en días laborales al fin de semana o al revés. 
+

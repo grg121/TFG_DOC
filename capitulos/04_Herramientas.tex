@@ -1,0 +1,69 @@
+\chapter{Fase 2: Análisis de las herramientas para el test de penetración}
+
+\section{Análisis de input/output utilizando Wazuh}
+
+En primer lugar, he creado un decodificador de logs sencillo para simplemente extraer el input introducido por el usuario y su output. Para comandos más interesantes (como nmap), utilizaremos un decodificador específico que sea capaz de separar la distinta información relevante.
+
+
+\begin{lstlisting}[language=XML, caption=Custom base decoder for command execution logger]
+<decoder name="shell_log">
+<program_name>shell_log</program_name>
+</decoder>
+
+<decoder name="shell_command">
+<parent>shell_log</parent>
+<regex># (\.*) -> (\.*)</regex>
+<order>command, output</order>
+</decoder>
+\end{lstlisting}
+
+Este decodificador, combinado con una regla que genere alertas de bajo nivel (3, que es el mínimo para que aparezcan en la interfaz de Wazuh) nos permite empezar a guardar información de todo lo que ocurra en el sistema.
+
+\begin{lstlisting}[language=XML, caption=Custom base rule for command execution logger]
+<group name="shell_execution">
+  <rule id="66600" level="3">
+  <decoded_as>shell_log</decoded_as>
+  <description>$(command) executed. Output: $(output)</description>
+</rule>
+and, output</order>
+</decoder>
+\end{lstlisting}
+
+No obstante, hay que tener cuidado con no llenar nuestros discos con información irrelevante o redundante. Por eso, cuando el proyecto esté más avanzado, modificaremos el nivel de las alertas basandose en el comando ejecutado, deforma que no guardemos la información de comandos como ls, top, pwd, cat, etc..
+
+En las siguientes secciones describiremos algunas herramientas de interés en tests de penetración de sistemas así como las reglas y/o decodificadores desarrollados para las mismas.
+
+\section{Distribuciones de Linux para pentesting}
+\section{Clasificación de herramientas}
+\subsection{Recopilación de información: descubrimiento de hosts y escaneo de puertos}
+A la hora de detectar los hosts visibles dentro de una red y qué servicios ofrece (y son visibles) podemos encontrar diversas herramientas:
+
+\begin{description}
+    \item[ping] Commando simple que permite enviar ICMP "echo requests" a hosts en la red para ver si están en funcionamiento.
+    \item [nmap] Herramienta de escaneo de redes que utiliza paquetes IP (raw) para determinar los hosts disponibles en una red y los servicios que ofrecen.
+    \item [metasploit framework] : ) 
+\end{description}
+\section{Análisis de las distintas herramientas}
+
+\subsection{Nmap}
+
+Nmap es una herramienta muy versátil y que puede ofrecer muchísima información sobre los diferentes endpoints en una red (aunque puede analizar hosts individualmente, parte de su interés radica en que puede ser utilizada para analizar redes enteras). Permite detectar aquellos servidores con determinados puertos abiertos o aquellos puertos que tiene abiertos cada servidor, las versiones del sistema operativo del endpoint o de los servicios que ofrece e incluso muchas vulnerabilidades de los mismos. Además, tiene numerosas opciones que permiten modificar el tipo de comunicación que se hará durante el escaneo e incluso la velocidad del mismo (un escaneo muy rápido podría suponer problemas con el firewall) o tratar de anonimizar los paquetes enviados durante el escaneo para conseguir ocultar nuestras acciones (\Gls{obfuscation})  
+
+Algunos ejemplos del uso de nmap que pueden ser de interés para el estudio y que podemos utilizar para empezar a desarrollar las reglas de Wazuh que generarán alertas cuando nmap detecte información relevante.
+
+\begin{table}[!hbtp]
+\begin{tabular}{|l|l|l|}
+\hline
+flags & example                    & usage                                      \\ \hline
+      & nmap 172.1.1.0/24          & Default scan a network using CIDR notation \\ \hline
+-sS   & nmap 172.1.1.11 -sS        & TCP SYN port scan (Default)                \\ \hline
+-sT   & nmap 192.1.10.10 -sT       & TCP connect port scan                      \\ \hline
+-sA   & nmap 122.122.1.1 -sA       & TCP ACK port scan                          \\ \hline
+-p    & nmap 122.128.1.1 -p 21-100 & scan ports in a range                      \\ \hline
+-O    & nmap -O 172.10.1.22        & OS detection                               \\ \hline
+-Tn   & nmap 192.168.1.10 -T2      & n={0,1,..,5} regulates the scan speed      \\ \hline
+\end{tabular}
+\caption{Some examples of nmap usage}
+\label{tab:my-table}
+\end{table}
+
