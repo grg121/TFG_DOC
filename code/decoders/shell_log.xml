@@ -1,0 +1,10 @@
+<decoder name="shell_log">
+<program_name>shell_log</program_name>
+</decoder>
+
+<decoder name="shell_command">
+<parent>shell_log</parent>
+<regex># (\.*) -> (\.*)</regex>
+<order>command, output</order>
+</decoder>
+

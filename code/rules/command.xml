@@ -1,0 +1,6 @@
+<group name="kali,command">
+  <rule id="66600" level="3">
+  <decoded_as>shell_log</decoded_as>
+  <description>$(command) executed. Output: $(output)</description>
+</rule>
+
